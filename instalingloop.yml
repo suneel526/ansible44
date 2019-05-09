@@ -5,7 +5,7 @@
   tasks: 
   - name: looping concept
     apt: 
-      name: "{{ items }}"
+      name: "{{ item }}"
       state: present
     with_items: 
      - git:
