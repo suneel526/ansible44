@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: webserver
   become: yes
   tasks:
   - name: installing apache2
@@ -8,8 +8,8 @@
       state: present
     when: ansible_os_family =="Debian"
   - name: start apache2 server 
-    apt: 
-      service: apache2
+    service: 
+      name: apache2
       state: started
     when: ansible_os_family =="Debian"   
   -  name: installing httpd
@@ -18,7 +18,7 @@
       state: present
      when: ansible_os_family =="RedHat"
   - name: start apache2 server 
-    yum: 
-      service: httpd
+    service: 
+      name: httpd
       state: started
     when: ansible_os_family =="RedHat"
