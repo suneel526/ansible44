@@ -8,7 +8,7 @@
       name: "{{ item }}"
       state: present
     with_items: 
-     - git:
-     - tree: 
-     - wget:  
+     - git
+     - tree 
+     - wget  
     when: ansible_os_family =="Debian"  
