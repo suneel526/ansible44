@@ -3,13 +3,13 @@
   become: yes
   gather_facts: yes
   tasks: 
-    - name: installing java on ubuntu
+    - name: install java on ubuntu
       apt:
         name: "{{javaonubuntu}}"
         state: present
       when: ansible_os_family =="Debian"
    
-    - name: installing java on RedHat
+    - name: install java on RedHat
       yum:
         name: "{{javaonRedHat}}"
         state: present
