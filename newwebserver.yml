@@ -9,7 +9,7 @@
     when: ansible_os_family =="Debian"
   - name: start apache2 server 
     service: 
-      name: "{webserverforubuntu{}}"
+      name: "{{webserverforubuntu}}"
       state: started
     when: ansible_os_family =="Debian"   
   -  name: installing httpd
