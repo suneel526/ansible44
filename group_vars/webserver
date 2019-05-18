@@ -2,5 +2,5 @@ key : values
 webserverforubuntu : apache2
 webserverforRedHat : httpd 
 
- javaonubuntu : openjdk-6-jre
- javaonRedHat : java-1.6.0-openjdk
+javaonubuntu : openjdk-6-jre
+javaonRedHat : java-1.6.0-openjdk

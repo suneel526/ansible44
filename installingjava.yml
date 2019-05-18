@@ -5,12 +5,12 @@
   tasks: 
     - name: install java on ubuntu
       apt:
-        name: openjdk-7-jre
+        name: "{{javaonubuntu}}"
         state: present
       when: ansible_os_family =="Debian"
    
     - name: install java on RedHat
       yum:
-        name: java-1.6.0-openjdk
+        name: "{{javaonRedHat}}"
         state: present
       when: ansible_os_family =="RedHat"
